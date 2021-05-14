@@ -18,6 +18,8 @@ namespace slidechk
         {
             bool chkIsChecked = chkswitch.Checked;
             chkswitch.Checked = false;
+            bool chkIsChecked2 = chkswitch2.Checked;
+            chkswitch2.Checked = false;
             Console.WriteLine("IsChecked = ", chkIsChecked);
         }
     }

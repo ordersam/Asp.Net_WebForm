@@ -10,12 +10,15 @@
         window.onload = function () {
             var switchHTML = document.getElementById("switchID1");
             var chkswitch = document.getElementById("<%=chkswitch.ClientID%>");
+            var chkswitch2 = document.getElementById("<%=chkswitch2.ClientID%>");
             switchHTML.addEventListener("change", function () {
                 if (switchHTML.checked == true) {
                     chkswitch.checked = true;
+                    chkswitch2.checked = true;
                 }
                 else {
                     chkswitch.checked = false;
+                    chkswitch2.checked = false;
                 }
             });
         };
@@ -25,6 +28,9 @@
             opacity:0;
             position:absolute;
             left:9999px;
+        }
+        .hiddenchk2 {
+            display: none;
         }
     </style>
 </head>
@@ -39,6 +45,7 @@
         </div>
         <asp:Panel ID="Panel1" runat="server">
             <asp:CheckBox ID="chkswitch" runat="server" CssClass="hiddenchk" />
+            <asp:CheckBox ID="chkswitch2" runat="server" CssClass="hiddenchk2" />
         </asp:Panel>
         <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
     </form>
